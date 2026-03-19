@@ -5,8 +5,9 @@ __pycache__/
 *.pyo
 *.pyd
 .ipynb_checkpoints/
-data/raw/
-data/processed/
-results/checkpoints/
-results/figures/
-results/logs/
+*/data/raw/
+*/data/processed/
+*/data/splits/
+*/results/checkpoints/
+*/results/figures/
+*/results/logs/
