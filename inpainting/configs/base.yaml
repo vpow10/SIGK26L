@@ -2,7 +2,8 @@ project_name: "inpainting_mini_project"
 seed: 47
 
 paths:
-  data_raw: "data/raw"
+  data_train_root: "data/raw/DIV2K_train_LR_bicubic"
+  data_test_root: "data/raw/DIV2K_valid_LR_bicubic"
   data_processed: "data/processed"
   splits: "data/splits"
   checkpoints: "results/checkpoints"
@@ -12,6 +13,11 @@ paths:
 data:
   image_size: 256
   channels: 3
+  file_extensions: [".png", ".jpg", ".jpeg", ".bmp"]
+  train_ratio_within_train_root: 0.9
+  val_ratio_within_train_root: 0.1
+  crop_mode_train: "random"
+  crop_mode_eval: "center"
 
 train:
   batch_size: 8
