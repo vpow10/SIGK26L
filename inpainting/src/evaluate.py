@@ -1,5 +1,13 @@
 """
-example usage: python src/evaluate.py --method telea --split test --mask_size 32
+example usage: python src/evaluate.py --method telea --split test --mask_size 32 -> baseline
+
+for unet evaluation, specify the checkpoint path:
+python src/evaluate.py \
+  --config configs/train_32.yaml \
+  --method unet \
+  --split test \
+  --mask_size 32 \
+  --checkpoint results/checkpoints/unet_mask32/best.pt
 """
 
 import argparse
@@ -15,9 +23,13 @@ sys.path.append(str(PROJECT_ROOT))
 
 from src.baselines.telea import telea_inpaint
 from src.metrics.metrics import average_metric_dicts, compute_all_metrics
+from src.models.build import build_model
+from src.utils.checkpoints import load_checkpoint
 from src.utils.config import load_config
 from src.utils.data import build_inpainting_dataloader
+from src.utils.device import get_device
 from src.utils.io import ensure_dir, save_tensor_image
+from src.utils.reconstruction import blend_prediction_with_known_region
 from src.utils.result_viz import save_comparison_figure
 from src.utils.seed import set_seed
 
@@ -25,11 +37,12 @@ from src.utils.seed import set_seed
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=str, default="configs/base.yaml")
-    parser.add_argument("--method", type=str, default="telea", choices=["telea"])
+    parser.add_argument("--method", type=str, required=True, choices=["telea", "unet"])
     parser.add_argument(
         "--split", type=str, default="test", choices=["train", "val", "test"]
     )
     parser.add_argument("--mask_size", type=int, required=True)
+    parser.add_argument("--checkpoint", type=str, default=None)
     parser.add_argument("--max_samples", type=int, default=None)
     parser.add_argument("--save_examples", type=int, default=10)
     parser.add_argument("--telea_radius", type=float, default=3.0)
@@ -41,6 +54,8 @@ def main() -> None:
     config = load_config(args.config)
     set_seed(config["seed"])
 
+    device = get_device(config["train"]["device"])
+
     loader = build_inpainting_dataloader(
         config=config,
         split=args.split,
@@ -51,11 +66,18 @@ def main() -> None:
 
     method_name = args.method
     results_root = ensure_dir(
-        Path("results")
-        / "baseline_eval"
-        / f"{method_name}_mask{args.mask_size}_{args.split}"
+        Path("results") / "eval" / f"{method_name}_mask{args.mask_size}_{args.split}"
     )
     examples_dir = ensure_dir(results_root / "examples")
+
+    model = None
+    if method_name == "unet":
+        if args.checkpoint is None:
+            raise ValueError("--checkpoint is required when method=unet")
+
+        model = build_model(config).to(device)
+        load_checkpoint(model, args.checkpoint, optimizer=None, map_location=device)
+        model.eval()
 
     metric_dicts = []
     per_image_results = []
@@ -67,6 +89,7 @@ def main() -> None:
         gt = batch["gt"][0]
         masked = batch["masked"][0]
         mask = batch["mask"][0]
+        model_input = batch["input"].to(device)
         path = batch["path"][0]
 
         if method_name == "telea":
@@ -75,6 +98,14 @@ def main() -> None:
                 mask=mask,
                 inpaint_radius=args.telea_radius,
             )
+        elif method_name == "unet":
+            with torch.no_grad():
+                pred_rgb = model(model_input)[0]
+                pred = blend_prediction_with_known_region(
+                    pred_rgb=pred_rgb.unsqueeze(0),
+                    masked_rgb=masked.unsqueeze(0).to(device),
+                    mask=mask.unsqueeze(0).to(device),
+                )[0].cpu()
         else:
             raise ValueError(f"Unsupported method: {method_name}")
 
