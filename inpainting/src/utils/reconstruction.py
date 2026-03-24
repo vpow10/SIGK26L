@@ -17,14 +17,6 @@ def blend_prediction_with_known_region(
     if mask.ndim != 4 or mask.shape[1] != 1:
         raise ValueError(f"Expected mask shape [B, 1, H, W], got {tuple(mask.shape)}")
 
-    if pred_rgb.shape[0] != masked_rgb.shape[0] or pred_rgb.shape[0] != mask.shape[0]:
-        raise ValueError("Batch sizes do not match")
-
-    if (
-        pred_rgb.shape[-2:] != masked_rgb.shape[-2:]
-        or pred_rgb.shape[-2:] != mask.shape[-2:]
-    ):
-        raise ValueError("Spatial dimensions do not match")
-
     reconstructed = masked_rgb * (1.0 - mask) + pred_rgb * mask
+    reconstructed = torch.clamp(reconstructed, 0.0, 1.0)
     return reconstructed

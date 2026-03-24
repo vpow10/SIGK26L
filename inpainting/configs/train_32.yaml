@@ -20,10 +20,10 @@ data:
   crop_mode_eval: "center"
 
 train:
-  batch_size: 8
+  batch_size: 4
   num_workers: 2
-  epochs: 30
-  learning_rate: 0.001
+  epochs: 40
+  learning_rate: 0.0005
   device: "cuda"
   save_every: 1
 
@@ -39,6 +39,8 @@ model:
 loss:
   hole_weight: 1.0
   valid_weight: 0.1
+  perceptual_weight: 0.05
+  gradient_weight: 0.2
 
 eval:
   save_visualizations: true

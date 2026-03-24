@@ -37,14 +37,13 @@ class UNet(nn.Module):
         self.dec4 = UpBlock(c2, c1, c1)
 
         self.out_conv = nn.Conv2d(c1, out_channels, kernel_size=1)
-        self.out_activation = nn.Sigmoid()
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x1 = self.enc1(x)  # [B, c1, H, W]
-        x2 = self.enc2(x1)  # [B, c2, H/2, W/2]
-        x3 = self.enc3(x2)  # [B, c3, H/4, W/4]
-        x4 = self.enc4(x3)  # [B, c4, H/8, W/8]
-        xb = self.bottleneck(x4)  # [B, c5, H/16, W/16]
+        x1 = self.enc1(x)
+        x2 = self.enc2(x1)
+        x3 = self.enc3(x2)
+        x4 = self.enc4(x3)
+        xb = self.bottleneck(x4)
 
         y1 = self.dec1(xb, x4)
         y2 = self.dec2(y1, x3)
@@ -52,5 +51,4 @@ class UNet(nn.Module):
         y4 = self.dec4(y3, x1)
 
         out = self.out_conv(y4)
-        out = self.out_activation(out)
         return out
