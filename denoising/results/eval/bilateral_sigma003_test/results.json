@@ -1,0 +1,714 @@
+{
+  "method": "bilateral",
+  "split": "test",
+  "sigma": 0.03,
+  "num_samples": 100,
+  "metrics": {
+    "sne": 13.880356574058533,
+    "psnr": 20.463386039079964,
+    "ssim": 0.5026881971210241,
+    "lpips": 0.40487336412072183
+  },
+  "per_image_results": [
+    {
+      "index": 0,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0801x2.png",
+      "psnr": 22.7659037463896,
+      "ssim": 0.5753795504570007,
+      "lpips": 0.3533446788787842
+    },
+    {
+      "index": 1,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0802x2.png",
+      "psnr": 22.369409736273344,
+      "ssim": 0.6270408630371094,
+      "lpips": 0.3899625539779663
+    },
+    {
+      "index": 2,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0803x2.png",
+      "psnr": 20.659848610118342,
+      "ssim": 0.49706825613975525,
+      "lpips": 0.3776029050350189
+    },
+    {
+      "index": 3,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0804x2.png",
+      "psnr": 20.143608068116187,
+      "ssim": 0.4740411043167114,
+      "lpips": 0.4152272939682007
+    },
+    {
+      "index": 4,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0805x2.png",
+      "psnr": 22.99971866182637,
+      "ssim": 0.3614884912967682,
+      "lpips": 0.4216679334640503
+    },
+    {
+      "index": 5,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0806x2.png",
+      "psnr": 22.77742864763806,
+      "ssim": 0.6602203249931335,
+      "lpips": 0.296929270029068
+    },
+    {
+      "index": 6,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0807x2.png",
+      "psnr": 22.015946632111827,
+      "ssim": 0.5949533581733704,
+      "lpips": 0.4476776421070099
+    },
+    {
+      "index": 7,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0808x2.png",
+      "psnr": 19.487424290559524,
+      "ssim": 0.43379297852516174,
+      "lpips": 0.47714129090309143
+    },
+    {
+      "index": 8,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0809x2.png",
+      "psnr": 21.663164483182303,
+      "ssim": 0.42674922943115234,
+      "lpips": 0.4213702380657196
+    },
+    {
+      "index": 9,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0810x2.png",
+      "psnr": 19.9251676270808,
+      "ssim": 0.2744479775428772,
+      "lpips": 0.46297046542167664
+    },
+    {
+      "index": 10,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0811x2.png",
+      "psnr": 22.410616327656,
+      "ssim": 0.4857776463031769,
+      "lpips": 0.6060501337051392
+    },
+    {
+      "index": 11,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0812x2.png",
+      "psnr": 22.08908580721301,
+      "ssim": 0.5296024680137634,
+      "lpips": 0.43391746282577515
+    },
+    {
+      "index": 12,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0813x2.png",
+      "psnr": 18.85732413808768,
+      "ssim": 0.4385121762752533,
+      "lpips": 0.37478479743003845
+    },
+    {
+      "index": 13,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0814x2.png",
+      "psnr": 20.584038897081594,
+      "ssim": 0.6329752802848816,
+      "lpips": 0.36150068044662476
+    },
+    {
+      "index": 14,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0815x2.png",
+      "psnr": 23.02495073089475,
+      "ssim": 0.5611956715583801,
+      "lpips": 0.444873571395874
+    },
+    {
+      "index": 15,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0816x2.png",
+      "psnr": 21.863064229343898,
+      "ssim": 0.41024699807167053,
+      "lpips": 0.5399599671363831
+    },
+    {
+      "index": 16,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0817x2.png",
+      "psnr": 18.92244907574232,
+      "ssim": 0.38549575209617615,
+      "lpips": 0.4087597727775574
+    },
+    {
+      "index": 17,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0818x2.png",
+      "psnr": 19.469853337834028,
+      "ssim": 0.5387470722198486,
+      "lpips": 0.3433830738067627
+    },
+    {
+      "index": 18,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0819x2.png",
+      "psnr": 19.86840719931343,
+      "ssim": 0.38774266839027405,
+      "lpips": 0.4594687521457672
+    },
+    {
+      "index": 19,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0820x2.png",
+      "psnr": 19.453812180468702,
+      "ssim": 0.495065301656723,
+      "lpips": 0.41941049695014954
+    },
+    {
+      "index": 20,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0821x2.png",
+      "psnr": 18.979997931841265,
+      "ssim": 0.5302329659461975,
+      "lpips": 0.29216837882995605
+    },
+    {
+      "index": 21,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0822x2.png",
+      "psnr": 20.54174778772909,
+      "ssim": 0.4071149528026581,
+      "lpips": 0.47736984491348267
+    },
+    {
+      "index": 22,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0823x2.png",
+      "psnr": 19.039636695867312,
+      "ssim": 0.49331045150756836,
+      "lpips": 0.4203597903251648
+    },
+    {
+      "index": 23,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0824x2.png",
+      "psnr": 18.48599562233538,
+      "ssim": 0.5746181607246399,
+      "lpips": 0.2862367033958435
+    },
+    {
+      "index": 24,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0825x2.png",
+      "psnr": 17.866907573166184,
+      "ssim": 0.529849112033844,
+      "lpips": 0.32097387313842773
+    },
+    {
+      "index": 25,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0826x2.png",
+      "psnr": 19.32485419987077,
+      "ssim": 0.5121934413909912,
+      "lpips": 0.44381290674209595
+    },
+    {
+      "index": 26,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0827x2.png",
+      "psnr": 23.240723083113227,
+      "ssim": 0.5661515593528748,
+      "lpips": 0.472634881734848
+    },
+    {
+      "index": 27,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0828x2.png",
+      "psnr": 18.078053425770385,
+      "ssim": 0.602627158164978,
+      "lpips": 0.17104873061180115
+    },
+    {
+      "index": 28,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0829x2.png",
+      "psnr": 20.360670610479154,
+      "ssim": 0.4269379675388336,
+      "lpips": 0.36487865447998047
+    },
+    {
+      "index": 29,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0830x2.png",
+      "psnr": 18.192603315289453,
+      "ssim": 0.3600504696369171,
+      "lpips": 0.48251020908355713
+    },
+    {
+      "index": 30,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0831x2.png",
+      "psnr": 20.492272288056157,
+      "ssim": 0.47223642468452454,
+      "lpips": 0.45505669713020325
+    },
+    {
+      "index": 31,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0832x2.png",
+      "psnr": 20.505599714752112,
+      "ssim": 0.56431645154953,
+      "lpips": 0.34260618686676025
+    },
+    {
+      "index": 32,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0833x2.png",
+      "psnr": 25.424181574811353,
+      "ssim": 0.8086471557617188,
+      "lpips": 0.28876304626464844
+    },
+    {
+      "index": 33,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0834x2.png",
+      "psnr": 22.57815493460185,
+      "ssim": 0.49751293659210205,
+      "lpips": 0.46382519602775574
+    },
+    {
+      "index": 34,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0835x2.png",
+      "psnr": 19.846229245714916,
+      "ssim": 0.3734076917171478,
+      "lpips": 0.5363374352455139
+    },
+    {
+      "index": 35,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0836x2.png",
+      "psnr": 19.219818645196906,
+      "ssim": 0.4537469446659088,
+      "lpips": 0.3919410705566406
+    },
+    {
+      "index": 36,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0837x2.png",
+      "psnr": 18.936775295731035,
+      "ssim": 0.4523749351501465,
+      "lpips": 0.41528016328811646
+    },
+    {
+      "index": 37,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0838x2.png",
+      "psnr": 25.411936195895855,
+      "ssim": 0.688072919845581,
+      "lpips": 0.3891899287700653
+    },
+    {
+      "index": 38,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0839x2.png",
+      "psnr": 23.31948281417319,
+      "ssim": 0.4320562779903412,
+      "lpips": 0.44009220600128174
+    },
+    {
+      "index": 39,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0840x2.png",
+      "psnr": 20.167719813211416,
+      "ssim": 0.3623548746109009,
+      "lpips": 0.4773220419883728
+    },
+    {
+      "index": 40,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0841x2.png",
+      "psnr": 20.28760953276539,
+      "ssim": 0.47235989570617676,
+      "lpips": 0.5428990125656128
+    },
+    {
+      "index": 41,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0842x2.png",
+      "psnr": 22.925086938749878,
+      "ssim": 0.5872330665588379,
+      "lpips": 0.3969496488571167
+    },
+    {
+      "index": 42,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0843x2.png",
+      "psnr": 20.66830642400386,
+      "ssim": 0.6649917960166931,
+      "lpips": 0.2521737515926361
+    },
+    {
+      "index": 43,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0844x2.png",
+      "psnr": 24.170081657603216,
+      "ssim": 0.8289825916290283,
+      "lpips": 0.19288019835948944
+    },
+    {
+      "index": 44,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0845x2.png",
+      "psnr": 24.329882031441393,
+      "ssim": 0.8223015666007996,
+      "lpips": 0.20614400506019592
+    },
+    {
+      "index": 45,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0846x2.png",
+      "psnr": 17.72664482290994,
+      "ssim": 0.5261256098747253,
+      "lpips": 0.27412790060043335
+    },
+    {
+      "index": 46,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0847x2.png",
+      "psnr": 18.656994393525423,
+      "ssim": 0.4634917676448822,
+      "lpips": 0.36329206824302673
+    },
+    {
+      "index": 47,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0848x2.png",
+      "psnr": 19.541366337517253,
+      "ssim": 0.5165298581123352,
+      "lpips": 0.29900920391082764
+    },
+    {
+      "index": 48,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0849x2.png",
+      "psnr": 17.4065100809629,
+      "ssim": 0.4770042598247528,
+      "lpips": 0.41071221232414246
+    },
+    {
+      "index": 49,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0850x2.png",
+      "psnr": 20.86743604524713,
+      "ssim": 0.5818721055984497,
+      "lpips": 0.40774938464164734
+    },
+    {
+      "index": 50,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0851x2.png",
+      "psnr": 18.714256676871422,
+      "ssim": 0.4943559169769287,
+      "lpips": 0.3511468768119812
+    },
+    {
+      "index": 51,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0852x2.png",
+      "psnr": 24.15310477716863,
+      "ssim": 0.5735650062561035,
+      "lpips": 0.5064710378646851
+    },
+    {
+      "index": 52,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0853x2.png",
+      "psnr": 18.5056919464003,
+      "ssim": 0.4622667133808136,
+      "lpips": 0.3098589777946472
+    },
+    {
+      "index": 53,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0854x2.png",
+      "psnr": 17.748984241639665,
+      "ssim": 0.3764834702014923,
+      "lpips": 0.4406049847602844
+    },
+    {
+      "index": 54,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0855x2.png",
+      "psnr": 23.515662104132776,
+      "ssim": 0.6650354266166687,
+      "lpips": 0.39872124791145325
+    },
+    {
+      "index": 55,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0856x2.png",
+      "psnr": 19.56937179992639,
+      "ssim": 0.2770484387874603,
+      "lpips": 0.6467114686965942
+    },
+    {
+      "index": 56,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0857x2.png",
+      "psnr": 25.605789875201936,
+      "ssim": 0.8289196491241455,
+      "lpips": 0.2487604022026062
+    },
+    {
+      "index": 57,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0858x2.png",
+      "psnr": 20.021520706572304,
+      "ssim": 0.3749058246612549,
+      "lpips": 0.5545273423194885
+    },
+    {
+      "index": 58,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0859x2.png",
+      "psnr": 19.567934764926605,
+      "ssim": 0.40067973732948303,
+      "lpips": 0.4967375099658966
+    },
+    {
+      "index": 59,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0860x2.png",
+      "psnr": 17.398415093468977,
+      "ssim": 0.44149288535118103,
+      "lpips": 0.42759960889816284
+    },
+    {
+      "index": 60,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0861x2.png",
+      "psnr": 18.760855203324212,
+      "ssim": 0.4900205135345459,
+      "lpips": 0.36994364857673645
+    },
+    {
+      "index": 61,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0862x2.png",
+      "psnr": 24.96641003731863,
+      "ssim": 0.5309146642684937,
+      "lpips": 0.5167759656906128
+    },
+    {
+      "index": 62,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0863x2.png",
+      "psnr": 20.847960294310255,
+      "ssim": 0.4801773726940155,
+      "lpips": 0.4335673451423645
+    },
+    {
+      "index": 63,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0864x2.png",
+      "psnr": 22.424589987119106,
+      "ssim": 0.43896546959877014,
+      "lpips": 0.5961973667144775
+    },
+    {
+      "index": 64,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0865x2.png",
+      "psnr": 21.311707541128456,
+      "ssim": 0.44533130526542664,
+      "lpips": 0.568766176700592
+    },
+    {
+      "index": 65,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0866x2.png",
+      "psnr": 24.623188434507224,
+      "ssim": 0.7520489692687988,
+      "lpips": 0.4356774687767029
+    },
+    {
+      "index": 66,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0867x2.png",
+      "psnr": 18.427084649342834,
+      "ssim": 0.40835264325141907,
+      "lpips": 0.39702361822128296
+    },
+    {
+      "index": 67,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0868x2.png",
+      "psnr": 19.513315540386767,
+      "ssim": 0.6111689209938049,
+      "lpips": 0.2976059019565582
+    },
+    {
+      "index": 68,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0869x2.png",
+      "psnr": 19.267622268054943,
+      "ssim": 0.4309726655483246,
+      "lpips": 0.49573788046836853
+    },
+    {
+      "index": 69,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0870x2.png",
+      "psnr": 19.052101818744266,
+      "ssim": 0.3569181263446808,
+      "lpips": 0.45336559414863586
+    },
+    {
+      "index": 70,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0871x2.png",
+      "psnr": 21.52306907542059,
+      "ssim": 0.5315706133842468,
+      "lpips": 0.46285873651504517
+    },
+    {
+      "index": 71,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0872x2.png",
+      "psnr": 18.39596922772998,
+      "ssim": 0.4240776002407074,
+      "lpips": 0.4131074547767639
+    },
+    {
+      "index": 72,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0873x2.png",
+      "psnr": 18.933403869724014,
+      "ssim": 0.3530322015285492,
+      "lpips": 0.6055481433868408
+    },
+    {
+      "index": 73,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0874x2.png",
+      "psnr": 21.815160816469543,
+      "ssim": 0.5876119136810303,
+      "lpips": 0.3490990996360779
+    },
+    {
+      "index": 74,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0875x2.png",
+      "psnr": 20.406307406255408,
+      "ssim": 0.40465879440307617,
+      "lpips": 0.5712090730667114
+    },
+    {
+      "index": 75,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0876x2.png",
+      "psnr": 19.957351141933426,
+      "ssim": 0.3506455421447754,
+      "lpips": 0.5493609309196472
+    },
+    {
+      "index": 76,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0877x2.png",
+      "psnr": 24.4999616846864,
+      "ssim": 0.7273051738739014,
+      "lpips": 0.32025909423828125
+    },
+    {
+      "index": 77,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0878x2.png",
+      "psnr": 20.417307382579786,
+      "ssim": 0.49194732308387756,
+      "lpips": 0.368256151676178
+    },
+    {
+      "index": 78,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0879x2.png",
+      "psnr": 18.653000530443475,
+      "ssim": 0.5310574769973755,
+      "lpips": 0.2926394045352936
+    },
+    {
+      "index": 79,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0880x2.png",
+      "psnr": 19.367464895139005,
+      "ssim": 0.3541230857372284,
+      "lpips": 0.4954749643802643
+    },
+    {
+      "index": 80,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0881x2.png",
+      "psnr": 19.9065325769372,
+      "ssim": 0.38712000846862793,
+      "lpips": 0.5500376224517822
+    },
+    {
+      "index": 81,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0882x2.png",
+      "psnr": 17.454996972960906,
+      "ssim": 0.5095680356025696,
+      "lpips": 0.226498544216156
+    },
+    {
+      "index": 82,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0883x2.png",
+      "psnr": 18.956133841545025,
+      "ssim": 0.36735430359840393,
+      "lpips": 0.47821366786956787
+    },
+    {
+      "index": 83,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0884x2.png",
+      "psnr": 18.453348110068116,
+      "ssim": 0.37878647446632385,
+      "lpips": 0.4195880889892578
+    },
+    {
+      "index": 84,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0885x2.png",
+      "psnr": 20.579260588594526,
+      "ssim": 0.37183380126953125,
+      "lpips": 0.5397262573242188
+    },
+    {
+      "index": 85,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0886x2.png",
+      "psnr": 18.97599177608607,
+      "ssim": 0.4747837781906128,
+      "lpips": 0.31105080246925354
+    },
+    {
+      "index": 86,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0887x2.png",
+      "psnr": 18.2461426891233,
+      "ssim": 0.5888332724571228,
+      "lpips": 0.2704845368862152
+    },
+    {
+      "index": 87,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0888x2.png",
+      "psnr": 18.589911224777907,
+      "ssim": 0.5214509963989258,
+      "lpips": 0.28641945123672485
+    },
+    {
+      "index": 88,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0889x2.png",
+      "psnr": 18.990903632088983,
+      "ssim": 0.46988406777381897,
+      "lpips": 0.3319036066532135
+    },
+    {
+      "index": 89,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0890x2.png",
+      "psnr": 21.289779125877185,
+      "ssim": 0.45397138595581055,
+      "lpips": 0.5147613883018494
+    },
+    {
+      "index": 90,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0891x2.png",
+      "psnr": 21.140337768363796,
+      "ssim": 0.6078580021858215,
+      "lpips": 0.30807894468307495
+    },
+    {
+      "index": 91,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0892x2.png",
+      "psnr": 18.28620499748693,
+      "ssim": 0.4286480247974396,
+      "lpips": 0.40868818759918213
+    },
+    {
+      "index": 92,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0893x2.png",
+      "psnr": 23.51531086014041,
+      "ssim": 0.688718855381012,
+      "lpips": 0.4735666513442993
+    },
+    {
+      "index": 93,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0894x2.png",
+      "psnr": 20.614849905279932,
+      "ssim": 0.6528875231742859,
+      "lpips": 0.31452882289886475
+    },
+    {
+      "index": 94,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0895x2.png",
+      "psnr": 21.940329979064312,
+      "ssim": 0.45561936497688293,
+      "lpips": 0.5127547979354858
+    },
+    {
+      "index": 95,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0896x2.png",
+      "psnr": 23.53324195765596,
+      "ssim": 0.764659583568573,
+      "lpips": 0.16784700751304626
+    },
+    {
+      "index": 96,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0897x2.png",
+      "psnr": 12.904765511469655,
+      "ssim": 0.12493141740560532,
+      "lpips": 0.3265116214752197
+    },
+    {
+      "index": 97,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0898x2.png",
+      "psnr": 19.60253071827635,
+      "ssim": 0.6293284296989441,
+      "lpips": 0.30748844146728516
+    },
+    {
+      "index": 98,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0899x2.png",
+      "psnr": 18.07438622121311,
+      "ssim": 0.43154585361480713,
+      "lpips": 0.28906771540641785
+    },
+    {
+      "index": 99,
+      "path": "../inpainting/data/raw/DIV2K_valid_LR_bicubic/X2/0900x2.png",
+      "psnr": 19.374580200794437,
+      "ssim": 0.5261345505714417,
+      "lpips": 0.3421584665775299
+    }
+  ]
+}
