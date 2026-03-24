@@ -22,7 +22,7 @@ data:
 train:
   batch_size: 8
   num_workers: 2
-  epochs: 30
+  epochs: 15
   learning_rate: 0.001
   device: "cuda"
   save_every: 1
@@ -39,7 +39,7 @@ model:
 loss:
   hole_weight: 1.0
   valid_weight: 0.1
-  perceptual_weight: 0.05
+  perceptual_weight: 0.1
 
 eval:
   save_visualizations: true
