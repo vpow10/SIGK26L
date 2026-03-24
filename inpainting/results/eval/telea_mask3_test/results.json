@@ -1,0 +1,713 @@
+{
+  "method": "telea",
+  "split": "test",
+  "mask_size": 3,
+  "num_samples": 100,
+  "metrics": {
+    "psnr": 68.08388992138161,
+    "ssim": 0.9999628108739853,
+    "lpips": 1.664026781696748e-05
+  },
+  "per_image_results": [
+    {
+      "index": 0,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0801x2.png",
+      "psnr": 61.618535588294215,
+      "ssim": 0.9999532699584961,
+      "lpips": 2.0454634068300948e-05
+    },
+    {
+      "index": 1,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0802x2.png",
+      "psnr": 71.82402054568884,
+      "ssim": 0.9999861717224121,
+      "lpips": 2.374963287365972e-06
+    },
+    {
+      "index": 2,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0803x2.png",
+      "psnr": 66.65615169676487,
+      "ssim": 0.9999532699584961,
+      "lpips": 6.25830034550745e-06
+    },
+    {
+      "index": 3,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0804x2.png",
+      "psnr": 71.90227650903435,
+      "ssim": 0.9999849200248718,
+      "lpips": 3.6176286357658682e-06
+    },
+    {
+      "index": 4,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0805x2.png",
+      "psnr": 74.94958284675621,
+      "ssim": 0.9999871850013733,
+      "lpips": 8.117041261357372e-07
+    },
+    {
+      "index": 5,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0806x2.png",
+      "psnr": 85.75202681041283,
+      "ssim": 0.9999977946281433,
+      "lpips": 7.54325810703449e-08
+    },
+    {
+      "index": 6,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0807x2.png",
+      "psnr": 58.72468024393697,
+      "ssim": 0.9999629855155945,
+      "lpips": 5.493413482327014e-06
+    },
+    {
+      "index": 7,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0808x2.png",
+      "psnr": 54.18377468524041,
+      "ssim": 0.9999265670776367,
+      "lpips": 2.1815230866195634e-05
+    },
+    {
+      "index": 8,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0809x2.png",
+      "psnr": 74.90731540083841,
+      "ssim": 0.999984085559845,
+      "lpips": 9.492773642705288e-07
+    },
+    {
+      "index": 9,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0810x2.png",
+      "psnr": 56.174263554109636,
+      "ssim": 0.9998972415924072,
+      "lpips": 8.637157588964328e-05
+    },
+    {
+      "index": 10,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0811x2.png",
+      "psnr": 65.70628370416749,
+      "ssim": 0.9999405741691589,
+      "lpips": 2.5361126972711645e-05
+    },
+    {
+      "index": 11,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0812x2.png",
+      "psnr": 70.67664179078062,
+      "ssim": 0.9999633431434631,
+      "lpips": 1.2028283890685998e-05
+    },
+    {
+      "index": 12,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0813x2.png",
+      "psnr": 60.6394852014798,
+      "ssim": 0.9999769330024719,
+      "lpips": 2.9997660021763295e-05
+    },
+    {
+      "index": 13,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0814x2.png",
+      "psnr": 85.04621362756389,
+      "ssim": 0.9999964237213135,
+      "lpips": 1.8540494295393728e-07
+    },
+    {
+      "index": 14,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0815x2.png",
+      "psnr": 74.07711522962057,
+      "ssim": 0.9999920725822449,
+      "lpips": 1.3611459053208819e-06
+    },
+    {
+      "index": 15,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0816x2.png",
+      "psnr": 67.56045828158926,
+      "ssim": 0.9999526143074036,
+      "lpips": 1.0414087228127755e-05
+    },
+    {
+      "index": 16,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0817x2.png",
+      "psnr": 61.91545599660671,
+      "ssim": 0.9999589920043945,
+      "lpips": 2.446427970426157e-05
+    },
+    {
+      "index": 17,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0818x2.png",
+      "psnr": 55.52762164505821,
+      "ssim": 0.9999004006385803,
+      "lpips": 1.2866486940765753e-05
+    },
+    {
+      "index": 18,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0819x2.png",
+      "psnr": 60.530270045046336,
+      "ssim": 0.9999573230743408,
+      "lpips": 2.4147193471435457e-05
+    },
+    {
+      "index": 19,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0820x2.png",
+      "psnr": 61.320317183211614,
+      "ssim": 0.9999279379844666,
+      "lpips": 1.6547457562410273e-05
+    },
+    {
+      "index": 20,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0821x2.png",
+      "psnr": 83.21351736125486,
+      "ssim": 0.9999983906745911,
+      "lpips": 4.4756305328519375e-08
+    },
+    {
+      "index": 21,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0822x2.png",
+      "psnr": 64.46290501511241,
+      "ssim": 0.9999375939369202,
+      "lpips": 1.6766540284152143e-05
+    },
+    {
+      "index": 22,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0823x2.png",
+      "psnr": 68.2930153350827,
+      "ssim": 0.9999657273292542,
+      "lpips": 2.4213013603002764e-06
+    },
+    {
+      "index": 23,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0824x2.png",
+      "psnr": 82.4335851630556,
+      "ssim": 0.9999963641166687,
+      "lpips": 5.828500206916942e-07
+    },
+    {
+      "index": 24,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0825x2.png",
+      "psnr": 78.44230502739092,
+      "ssim": 0.999997079372406,
+      "lpips": 1.7374064498199004e-07
+    },
+    {
+      "index": 25,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0826x2.png",
+      "psnr": 67.66832603160671,
+      "ssim": 0.9999730587005615,
+      "lpips": 5.227108886174392e-06
+    },
+    {
+      "index": 26,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0827x2.png",
+      "psnr": 68.71153145501589,
+      "ssim": 0.999963104724884,
+      "lpips": 3.3971671200561104e-06
+    },
+    {
+      "index": 27,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0828x2.png",
+      "psnr": 75.63856102829594,
+      "ssim": 0.9999904036521912,
+      "lpips": 1.6762994903274375e-07
+    },
+    {
+      "index": 28,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0829x2.png",
+      "psnr": 73.32164294015242,
+      "ssim": 0.9999726414680481,
+      "lpips": 1.1869271929754177e-06
+    },
+    {
+      "index": 29,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0830x2.png",
+      "psnr": 62.016956938860375,
+      "ssim": 0.9999358057975769,
+      "lpips": 2.4523527827113867e-05
+    },
+    {
+      "index": 30,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0831x2.png",
+      "psnr": 60.739419139042184,
+      "ssim": 0.9999027848243713,
+      "lpips": 7.240213744807988e-05
+    },
+    {
+      "index": 31,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0832x2.png",
+      "psnr": 78.81372280889113,
+      "ssim": 0.9999902248382568,
+      "lpips": 3.9653579619880475e-07
+    },
+    {
+      "index": 32,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0833x2.png",
+      "psnr": 80.16776490402793,
+      "ssim": 0.9999908804893494,
+      "lpips": 1.0857252163987141e-06
+    },
+    {
+      "index": 33,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0834x2.png",
+      "psnr": 75.51586955908432,
+      "ssim": 0.9999906420707703,
+      "lpips": 2.4517264591850108e-06
+    },
+    {
+      "index": 34,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0835x2.png",
+      "psnr": 70.20677795501774,
+      "ssim": 0.9999868869781494,
+      "lpips": 2.641346782183973e-06
+    },
+    {
+      "index": 35,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0836x2.png",
+      "psnr": 57.364646612837824,
+      "ssim": 0.9999575018882751,
+      "lpips": 1.011370841297321e-05
+    },
+    {
+      "index": 36,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0837x2.png",
+      "psnr": 65.80730170747404,
+      "ssim": 0.9999650120735168,
+      "lpips": 5.832731403643265e-06
+    },
+    {
+      "index": 37,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0838x2.png",
+      "psnr": 78.51408910622932,
+      "ssim": 0.9999911785125732,
+      "lpips": 3.2056864256446715e-06
+    },
+    {
+      "index": 38,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0839x2.png",
+      "psnr": 69.4025148343489,
+      "ssim": 0.9999502301216125,
+      "lpips": 1.2643845366255846e-05
+    },
+    {
+      "index": 39,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0840x2.png",
+      "psnr": 72.28734523510721,
+      "ssim": 0.9999849200248718,
+      "lpips": 2.291675173182739e-06
+    },
+    {
+      "index": 40,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0841x2.png",
+      "psnr": 71.91809703428606,
+      "ssim": 0.9999790191650391,
+      "lpips": 4.725868166133296e-06
+    },
+    {
+      "index": 41,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0842x2.png",
+      "psnr": 64.52794018460001,
+      "ssim": 0.9999074935913086,
+      "lpips": 2.9244718461995944e-05
+    },
+    {
+      "index": 42,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0843x2.png",
+      "psnr": 73.53098529768587,
+      "ssim": 0.9999895691871643,
+      "lpips": 5.876671025362157e-07
+    },
+    {
+      "index": 43,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0844x2.png",
+      "psnr": 80.2750035374819,
+      "ssim": 0.9999959468841553,
+      "lpips": 5.639864184558974e-07
+    },
+    {
+      "index": 44,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0845x2.png",
+      "psnr": 85.26898001466728,
+      "ssim": 0.9999966621398926,
+      "lpips": 1.801311810822881e-07
+    },
+    {
+      "index": 45,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0846x2.png",
+      "psnr": 57.99121380989912,
+      "ssim": 0.9998770356178284,
+      "lpips": 2.8782125809811987e-05
+    },
+    {
+      "index": 46,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0847x2.png",
+      "psnr": 62.052232754112765,
+      "ssim": 0.9999825358390808,
+      "lpips": 1.01528958111885e-05
+    },
+    {
+      "index": 47,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0848x2.png",
+      "psnr": 77.64258764324026,
+      "ssim": 0.9999909400939941,
+      "lpips": 1.2674807976509328e-06
+    },
+    {
+      "index": 48,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0849x2.png",
+      "psnr": 57.17604072510906,
+      "ssim": 0.999955415725708,
+      "lpips": 5.349032289814204e-05
+    },
+    {
+      "index": 49,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0850x2.png",
+      "psnr": 61.47067801205178,
+      "ssim": 0.9999699592590332,
+      "lpips": 2.1349933376768604e-05
+    },
+    {
+      "index": 50,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0851x2.png",
+      "psnr": 68.53101236181782,
+      "ssim": 0.9999825358390808,
+      "lpips": 2.3795425931893988e-06
+    },
+    {
+      "index": 51,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0852x2.png",
+      "psnr": 77.17515417062813,
+      "ssim": 0.9999790787696838,
+      "lpips": 2.520248699511285e-06
+    },
+    {
+      "index": 52,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0853x2.png",
+      "psnr": 71.72688431680893,
+      "ssim": 0.9999759197235107,
+      "lpips": 1.529775545350276e-06
+    },
+    {
+      "index": 53,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0854x2.png",
+      "psnr": 61.301023755941976,
+      "ssim": 0.9999442100524902,
+      "lpips": 9.632260116632096e-06
+    },
+    {
+      "index": 54,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0855x2.png",
+      "psnr": 74.09452251507304,
+      "ssim": 0.999971866607666,
+      "lpips": 4.3939085117017385e-06
+    },
+    {
+      "index": 55,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0856x2.png",
+      "psnr": 65.62117462442457,
+      "ssim": 0.9999691843986511,
+      "lpips": 5.430923465610249e-06
+    },
+    {
+      "index": 56,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0857x2.png",
+      "psnr": 79.63666797090332,
+      "ssim": 0.9999958872795105,
+      "lpips": 5.554769586524344e-07
+    },
+    {
+      "index": 57,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0858x2.png",
+      "psnr": 62.2216928910425,
+      "ssim": 0.9999448657035828,
+      "lpips": 1.1880162674060557e-05
+    },
+    {
+      "index": 58,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0859x2.png",
+      "psnr": 56.08302017009617,
+      "ssim": 0.9999032616615295,
+      "lpips": 5.5465625337092206e-05
+    },
+    {
+      "index": 59,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0860x2.png",
+      "psnr": 52.14052721650195,
+      "ssim": 0.9999292492866516,
+      "lpips": 1.7273812773055397e-05
+    },
+    {
+      "index": 60,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0861x2.png",
+      "psnr": 58.96684301095305,
+      "ssim": 0.9999651908874512,
+      "lpips": 7.792200449330267e-06
+    },
+    {
+      "index": 61,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0862x2.png",
+      "psnr": 81.67162337789202,
+      "ssim": 0.9999982714653015,
+      "lpips": 4.3361048085444054e-08
+    },
+    {
+      "index": 62,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0863x2.png",
+      "psnr": 67.9897160621301,
+      "ssim": 0.9999873638153076,
+      "lpips": 7.345266112679383e-06
+    },
+    {
+      "index": 63,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0864x2.png",
+      "psnr": 65.71134160012525,
+      "ssim": 0.9999671578407288,
+      "lpips": 1.4745615771971643e-05
+    },
+    {
+      "index": 64,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0865x2.png",
+      "psnr": 70.53218983438535,
+      "ssim": 0.999971866607666,
+      "lpips": 2.873905714295688e-06
+    },
+    {
+      "index": 65,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0866x2.png",
+      "psnr": 60.74264206188161,
+      "ssim": 0.999966561794281,
+      "lpips": 4.879027255810797e-05
+    },
+    {
+      "index": 66,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0867x2.png",
+      "psnr": 54.54183791009865,
+      "ssim": 0.999929666519165,
+      "lpips": 1.4982148059061728e-05
+    },
+    {
+      "index": 67,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0868x2.png",
+      "psnr": 59.207995706055186,
+      "ssim": 0.999970018863678,
+      "lpips": 1.716638325888198e-05
+    },
+    {
+      "index": 68,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0869x2.png",
+      "psnr": 57.88722585529153,
+      "ssim": 0.9998124241828918,
+      "lpips": 5.2057883294764906e-05
+    },
+    {
+      "index": 69,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0870x2.png",
+      "psnr": 64.06497151576528,
+      "ssim": 0.9999735951423645,
+      "lpips": 1.3992367712489795e-05
+    },
+    {
+      "index": 70,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0871x2.png",
+      "psnr": 66.05759356526634,
+      "ssim": 0.9999709129333496,
+      "lpips": 5.439970664156135e-06
+    },
+    {
+      "index": 71,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0872x2.png",
+      "psnr": 69.20007732087744,
+      "ssim": 0.999952495098114,
+      "lpips": 1.9916249129892094e-06
+    },
+    {
+      "index": 72,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0873x2.png",
+      "psnr": 57.59820223252482,
+      "ssim": 0.9999586939811707,
+      "lpips": 3.817382093984634e-05
+    },
+    {
+      "index": 73,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0874x2.png",
+      "psnr": 69.52561977143766,
+      "ssim": 0.9999690651893616,
+      "lpips": 1.923620175148244e-06
+    },
+    {
+      "index": 74,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0875x2.png",
+      "psnr": 53.86695956870866,
+      "ssim": 0.9999045729637146,
+      "lpips": 0.00019146647537127137
+    },
+    {
+      "index": 75,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0876x2.png",
+      "psnr": 76.53363218967682,
+      "ssim": 0.999988317489624,
+      "lpips": 2.652277260040137e-07
+    },
+    {
+      "index": 76,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0877x2.png",
+      "psnr": 77.43069613299178,
+      "ssim": 0.9999929070472717,
+      "lpips": 4.7168839500955073e-07
+    },
+    {
+      "index": 77,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0878x2.png",
+      "psnr": 73.12891072997164,
+      "ssim": 0.9999985098838806,
+      "lpips": 2.9210036700533237e-07
+    },
+    {
+      "index": 78,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0879x2.png",
+      "psnr": 60.273194261810126,
+      "ssim": 0.9999540448188782,
+      "lpips": 6.951641262276098e-05
+    },
+    {
+      "index": 79,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0880x2.png",
+      "psnr": 67.3876678766486,
+      "ssim": 0.999991238117218,
+      "lpips": 1.4199855513652437e-06
+    },
+    {
+      "index": 80,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0881x2.png",
+      "psnr": 64.53468982804516,
+      "ssim": 0.999938428401947,
+      "lpips": 1.444796180294361e-05
+    },
+    {
+      "index": 81,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0882x2.png",
+      "psnr": 64.25983432914718,
+      "ssim": 0.9999473690986633,
+      "lpips": 1.0068844858324155e-05
+    },
+    {
+      "index": 82,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0883x2.png",
+      "psnr": 60.2996826737794,
+      "ssim": 0.9999186396598816,
+      "lpips": 5.47033705515787e-05
+    },
+    {
+      "index": 83,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0884x2.png",
+      "psnr": 60.41064458474167,
+      "ssim": 0.9998295903205872,
+      "lpips": 4.04596357839182e-05
+    },
+    {
+      "index": 84,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0885x2.png",
+      "psnr": 63.711624979489805,
+      "ssim": 0.9999670386314392,
+      "lpips": 5.719686669181101e-06
+    },
+    {
+      "index": 85,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0886x2.png",
+      "psnr": 78.97166579735851,
+      "ssim": 0.9999957084655762,
+      "lpips": 1.4490943556211278e-07
+    },
+    {
+      "index": 86,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0887x2.png",
+      "psnr": 63.5795098498249,
+      "ssim": 0.9999711513519287,
+      "lpips": 1.3036667496635346e-06
+    },
+    {
+      "index": 87,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0888x2.png",
+      "psnr": 70.19610291332116,
+      "ssim": 0.9999871850013733,
+      "lpips": 1.0051653589471243e-06
+    },
+    {
+      "index": 88,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0889x2.png",
+      "psnr": 69.44415910533601,
+      "ssim": 0.9999658465385437,
+      "lpips": 1.5097957657417282e-06
+    },
+    {
+      "index": 89,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0890x2.png",
+      "psnr": 64.42509887100596,
+      "ssim": 0.9999637603759766,
+      "lpips": 9.271162525692489e-06
+    },
+    {
+      "index": 90,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0891x2.png",
+      "psnr": 82.55422879657816,
+      "ssim": 0.9999950528144836,
+      "lpips": 6.982280353895476e-08
+    },
+    {
+      "index": 91,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0892x2.png",
+      "psnr": 56.838127997666994,
+      "ssim": 0.9999495148658752,
+      "lpips": 0.00023011189477983862
+    },
+    {
+      "index": 92,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0893x2.png",
+      "psnr": 83.14289858045544,
+      "ssim": 0.9999952912330627,
+      "lpips": 2.157401468139142e-06
+    },
+    {
+      "index": 93,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0894x2.png",
+      "psnr": 78.4423043817789,
+      "ssim": 0.9999864101409912,
+      "lpips": 1.6866074759036565e-07
+    },
+    {
+      "index": 94,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0895x2.png",
+      "psnr": 59.69042676354591,
+      "ssim": 0.9998918175697327,
+      "lpips": 1.1671749234665185e-05
+    },
+    {
+      "index": 95,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0896x2.png",
+      "psnr": 77.70221779489218,
+      "ssim": 0.9999901652336121,
+      "lpips": 1.0389736360139068e-07
+    },
+    {
+      "index": 96,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0897x2.png",
+      "psnr": 54.28718862272718,
+      "ssim": 0.9999368786811829,
+      "lpips": 5.1971284847240895e-05
+    },
+    {
+      "index": 97,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0898x2.png",
+      "psnr": 80.16776488732282,
+      "ssim": 0.9999899864196777,
+      "lpips": 7.232612375673853e-08
+    },
+    {
+      "index": 98,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0899x2.png",
+      "psnr": 69.41734136146981,
+      "ssim": 0.9999778866767883,
+      "lpips": 2.6484790396352764e-06
+    },
+    {
+      "index": 99,
+      "path": "data/raw/DIV2K_valid_LR_bicubic/X2/0900x2.png",
+      "psnr": 60.89481168471952,
+      "ssim": 0.9999793171882629,
+      "lpips": 1.107913021769491e-06
+    }
+  ]
+}

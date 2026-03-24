@@ -117,7 +117,10 @@ Opis projektu wymaga tabeli z metrykami **PSNR / SSIM / LPIPS** dla każdej ocen
 
 ### Wyniki dla wariantu 3×3
 
-TODO
+| Metoda | PSNR ↑ | SSIM ↑ | LPIPS ↓ |
+|---|---:|---:|---:|
+| `opencv telea inpaint 3x3` | 68.0839 | 1.0000 | 0.0000 |
+| `gated-dilated unet 3x3` | 65.7399 | 0.9999 | 0.0001 |
 
 ## Najważniejsze pliki
 
