@@ -1,0 +1,40 @@
+project_name: "denoising_mini_project"
+seed: 47
+
+paths:
+  data_train_root: "../inpainting/data/raw/DIV2K_train_LR_bicubic"
+  data_test_root: "../inpainting/data/raw/DIV2K_valid_LR_bicubic"
+  splits: "../inpainting/data/splits"
+  checkpoints: "results/checkpoints"
+  logs: "results/logs"
+  figures: "results/figures"
+
+data:
+  image_size: 256
+  channels: 3
+  file_extensions: [".png", ".jpg", ".jpeg", ".bmp"]
+  train_ratio_within_train_root: 0.9
+  val_ratio_within_train_root: 0.1
+
+train:
+  batch_size: 8
+  num_workers: 2
+  epochs: 30
+  learning_rate: 0.001
+  device: "cuda"
+  save_every: 1
+
+noise:
+  sigma: 0.03
+
+loss:
+  name: "l1"
+
+model:
+  name: "unet"
+  in_channels: 3
+  out_channels: 3
+  base_channels: 64
+
+eval:
+  save_visualizations: true
