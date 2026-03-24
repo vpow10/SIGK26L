@@ -62,6 +62,7 @@ def main() -> None:
         hole_weight=config["loss"]["hole_weight"],
         valid_weight=config["loss"]["valid_weight"],
         perceptual_weight=config["loss"]["perceptual_weight"],
+        style_weight=config["loss"]["style_weight"],
     ).to(device)
 
     optimizer = torch.optim.Adam(
@@ -74,10 +75,12 @@ def main() -> None:
         "train_hole_loss": [],
         "train_valid_loss": [],
         "train_perceptual_loss": [],
+        "train_style_loss": [],
         "val_loss": [],
         "val_hole_loss": [],
         "val_valid_loss": [],
         "val_perceptual_loss": [],
+        "val_style_loss": [],
         "val_psnr": [],
         "val_ssim": [],
         "val_lpips": [],
@@ -114,11 +117,13 @@ def main() -> None:
         history["train_hole_loss"].append(train_stats["loss_hole"])
         history["train_valid_loss"].append(train_stats["loss_valid"])
         history["train_perceptual_loss"].append(train_stats["loss_perceptual"])
+        history["train_style_loss"].append(train_stats["loss_style"])
 
         history["val_loss"].append(val_stats["loss_total"])
         history["val_hole_loss"].append(val_stats["loss_hole"])
         history["val_valid_loss"].append(val_stats["loss_valid"])
         history["val_perceptual_loss"].append(val_stats["loss_perceptual"])
+        history["val_style_loss"].append(val_stats["loss_style"])
         history["val_psnr"].append(val_stats["psnr"])
         history["val_ssim"].append(val_stats["ssim"])
         history["val_lpips"].append(val_stats["lpips"])

@@ -40,6 +40,7 @@ loss:
   hole_weight: 1.0
   valid_weight: 0.1
   perceptual_weight: 0.1
+  style_weight: 120.0
 
 eval:
   save_visualizations: true

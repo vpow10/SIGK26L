@@ -52,14 +52,14 @@ class WeightedL1InpaintingLoss(nn.Module):
         return total_loss, stats
 
 
-class VGGPerceptualLoss(nn.Module):
+class VGGPerceptualAndStyleLoss(nn.Module):
     def __init__(self):
         super().__init__()
         vgg = models.vgg16(weights=models.VGG16_Weights.DEFAULT).features
 
-        self.slice1 = nn.Sequential(*[vgg[x] for x in range(4)])
-        self.slice2 = nn.Sequential(*[vgg[x] for x in range(4, 9)])
-        self.slice3 = nn.Sequential(*[vgg[x] for x in range(9, 16)])
+        self.slice1 = nn.Sequential(*[vgg[x] for x in range(4)])  # relu1_2
+        self.slice2 = nn.Sequential(*[vgg[x] for x in range(4, 9)])  # relu2_2
+        self.slice3 = nn.Sequential(*[vgg[x] for x in range(9, 16)])  # relu3_3
 
         for param in self.parameters():
             param.requires_grad = False
@@ -70,8 +70,18 @@ class VGGPerceptualLoss(nn.Module):
         self.register_buffer(
             "std", torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1)
         )
+        self.l1 = nn.L1Loss()
 
-    def forward(self, pred: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+    def gram_matrix(self, x: torch.Tensor) -> torch.Tensor:
+        b, c, h, w = x.size()
+        features = x.view(b, c, h * w)
+        features_t = features.transpose(1, 2)
+        gram = features.bmm(features_t) / (c * h * w)
+        return gram
+
+    def forward(
+        self, pred: torch.Tensor, target: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor]:
         pred = (pred - self.mean) / self.std
         target = (target - self.mean) / self.std
 
@@ -84,37 +94,50 @@ class VGGPerceptualLoss(nn.Module):
         pred_f3 = self.slice3(pred_f2)
         tgt_f3 = self.slice3(tgt_f2)
 
-        loss = (
-            nn.functional.l1_loss(pred_f1, tgt_f1)
-            + nn.functional.l1_loss(pred_f2, tgt_f2)
-            + nn.functional.l1_loss(pred_f3, tgt_f3)
+        perc_loss = (
+            self.l1(pred_f1, tgt_f1)
+            + self.l1(pred_f2, tgt_f2)
+            + self.l1(pred_f3, tgt_f3)
         )
-        return loss
+
+        style_loss = (
+            self.l1(self.gram_matrix(pred_f1), self.gram_matrix(tgt_f1))
+            + self.l1(self.gram_matrix(pred_f2), self.gram_matrix(tgt_f2))
+            + self.l1(self.gram_matrix(pred_f3), self.gram_matrix(tgt_f3))
+        )
+
+        return perc_loss, style_loss
 
 
 class InpaintingTotalLoss(nn.Module):
-    """Combines Weighted L1 with Perceptual Loss"""
+    """Combines L1, Perceptual, and Style Loss"""
 
     def __init__(
         self,
         hole_weight: float = 1.0,
         valid_weight: float = 0.1,
-        perceptual_weight: float = 0.05,
+        perceptual_weight: float = 0.1,
+        style_weight: float = 120.0,
     ):
         super().__init__()
         self.l1_loss = WeightedL1InpaintingLoss(hole_weight, valid_weight)
-        self.perceptual_loss = VGGPerceptualLoss()
+        self.vgg_loss = VGGPerceptualAndStyleLoss()
+
         self.perceptual_weight = perceptual_weight
+        self.style_weight = style_weight
 
     def forward(self, pred: torch.Tensor, target: torch.Tensor, mask: torch.Tensor):
         l1_total, stats = self.l1_loss(pred, target, mask)
 
         comp = pred * mask + target * (1.0 - mask)
-        p_loss = self.perceptual_loss(comp, target)
+        p_loss, s_loss = self.vgg_loss(comp, target)
 
-        total_loss = l1_total + (self.perceptual_weight * p_loss)
+        total_loss = (
+            l1_total + (self.perceptual_weight * p_loss) + (self.style_weight * s_loss)
+        )
 
         stats["loss_perceptual"] = float(p_loss.detach().item())
+        stats["loss_style"] = float(s_loss.detach().item())
         stats["loss_total"] = float(total_loss.detach().item())
 
         return total_loss, stats
