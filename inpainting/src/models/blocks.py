@@ -71,3 +71,37 @@ class UpBlock(nn.Module):
         x = torch.cat([skip, x], dim=1)
         x = self.conv(x)
         return x
+
+
+class DilatedConvBlock(nn.Module):
+    """
+    Two Conv-BN-ReLU layers using dilation to increase receptive field.
+    """
+
+    def __init__(self, in_channels: int, out_channels: int, dilation: int = 2) -> None:
+        super().__init__()
+        self.block = nn.Sequential(
+            nn.Conv2d(
+                in_channels,
+                out_channels,
+                kernel_size=3,
+                padding=dilation,
+                dilation=dilation,
+                bias=False,
+            ),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(
+                out_channels,
+                out_channels,
+                kernel_size=3,
+                padding=dilation,
+                dilation=dilation,
+                bias=False,
+            ),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.block(x)

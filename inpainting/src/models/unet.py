@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from src.models.blocks import ConvBlock, DownBlock, UpBlock
+from src.models.blocks import ConvBlock, DilatedConvBlock, DownBlock, UpBlock
 
 
 class UNet(nn.Module):
@@ -29,7 +29,11 @@ class UNet(nn.Module):
         self.enc2 = DownBlock(c1, c2)
         self.enc3 = DownBlock(c2, c3)
         self.enc4 = DownBlock(c3, c4)
-        self.bottleneck = DownBlock(c4, c5)
+        self.bottleneck = nn.Sequential(
+            nn.MaxPool2d(kernel_size=2, stride=2),
+            DilatedConvBlock(c4, c5, dilation=2),
+            DilatedConvBlock(c5, c5, dilation=4),
+        )
 
         self.dec1 = UpBlock(c5, c4, c4)
         self.dec2 = UpBlock(c4, c3, c3)
