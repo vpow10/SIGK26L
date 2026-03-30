@@ -100,27 +100,53 @@ Dla każdego obrazu zapisywane są również przykłady jakościowe:
 
 ## Wyniki
 
-Opis projektu wymaga tabeli z metrykami **PSNR / SSIM / LPIPS** dla każdej ocenianej metody. Poniżej znajduje się tabela dla końcowego wariantu eksperymentu z maską **32×32**, na podstawie przesłanych plików wynikowych.
+Opis projektu wymaga raportowania metryk **PSNR / SSIM / LPIPS**, a dodatkowo rozszerzono ewaluację o metrykę **SNE (Squared Norm Error)**.
 
-### Inpainting 32×32 — zbiór testowy DIV2K
+Wyniki raportowane są w dwóch wariantach:
+- **full** – dla całego obrazu,
+- **hole** – tylko w obszarze maski (najbardziej miarodajne dla inpaintingu).
 
-| Metoda | PSNR ↑ | SSIM ↑ | LPIPS ↓ |
-|---|---:|---:|---:|
-| `opencv telea inpaint 32x32` | 38.0547 | 0.9908 | 0.0120 |
-| `gated-dilated unet 32x32` | 36.2415 | 0.9894 | 0.0163 |
+---
 
-### Krótki komentarz do wyników
+## Inpainting 32×32 — zbiór testowy DIV2K
 
-- Metoda bazowa **Telea** pozostaje lepsza od końcowego modelu U-Net dla wariantu **32×32**.
-- Własny model daje jednak wynik wyraźnie lepszy od wcześniejszych nieudanych wariantów eksperymentalnych i zachowuje poprawną jakość strukturalną obrazu.
-- Największym wyzwaniem pozostaje realistyczne odtwarzanie lokalnych tekstur w obrębie większej maski.
+### Metryki globalne (cały obraz)
 
-### Wyniki dla wariantu 3×3
+| Metoda | PSNR ↑ | SSIM ↑ | LPIPS ↓ | SNE ↓ |
+|---|---:|---:|---:|---:|
+| `opencv telea inpaint 32x32` | 38.0547 | 0.9908 | 0.0120 | 61.7336 |
+| `gated-dilated unet 32x32` | 34.3963 | 0.9875 | 0.0155 | 111.6530 |
+
+---
+
+### Metryki lokalne (tylko maska — właściwy inpainting)
+
+| Metoda | PSNR ↑ | SSIM ↑ | LPIPS ↓ | SNE ↓ |
+|---|---:|---:|---:|---:|
+| `opencv telea inpaint 32x32` | 19.9929 | 0.3854 | 0.2088 | 61.7336 |
+| `gated-dilated unet 32x32` | 16.3345 | 0.2984 | 0.1820 | 111.6530 |
+
+---
+
+## Krótki komentarz do wyników
+
+- Metoda klasyczna **Telea** przewyższa model U-Net zarówno w metrykach globalnych, jak i lokalnych.
+- Różnica jest szczególnie widoczna w metrykach liczonych **w obrębie maski**, które najlepiej odzwierciedlają jakość inpaintingu.
+- Model U-Net generuje bardziej rozmyte rekonstrukcje, co skutkuje niższym PSNR i SSIM oraz wyższym błędem SNE.
+- Jednocześnie LPIPS dla U-Net jest niższy niż dla Telea w obszarze maski, co sugeruje, że rekonstrukcje są perceptualnie bardziej „gładkie”, choć mniej dokładne pikselowo.
+
+## Wyniki dla wariantu 3×3
 
 | Metoda | PSNR ↑ | SSIM ↑ | LPIPS ↓ |
 |---|---:|---:|---:|
 | `opencv telea inpaint 3x3` | 68.0839 | 1.0000 | 0.0000 |
 | `gated-dilated unet 3x3` | 65.7399 | 0.9999 | 0.0001 |
+
+### Uwaga
+
+Dla maski **3×3** nie raportowano metryk lokalnych (hole), ponieważ:
+- SSIM wymaga większego kontekstu przestrzennego,
+- bardzo mały rozmiar maski powoduje niestabilność i brak interpretowalności wyników.
 
 ## Najważniejsze pliki
 

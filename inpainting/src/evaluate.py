@@ -109,15 +109,19 @@ def main() -> None:
         else:
             raise ValueError(f"Unsupported method: {method_name}")
 
-        metrics = compute_all_metrics(pred, gt)
+        metrics = compute_all_metrics(pred, gt, mask)
         metric_dicts.append(metrics)
 
         sample_result = {
             "index": idx,
             "path": path,
-            "psnr": metrics["psnr"],
-            "ssim": metrics["ssim"],
-            "lpips": metrics["lpips"],
+            "psnr_full": metrics["psnr_full"],
+            "ssim_full": metrics["ssim_full"],
+            "lpips_full": metrics["lpips_full"],
+            "psnr_hole": metrics["psnr_hole"],
+            "ssim_hole": metrics["ssim_hole"],
+            "lpips_hole": metrics["lpips_hole"],
+            "sne": metrics["sne"],
         }
         per_image_results.append(sample_result)
 
@@ -158,9 +162,13 @@ def main() -> None:
     print(f"Split:      {args.split}")
     print(f"Mask size:  {args.mask_size}")
     print(f"Samples:    {len(metric_dicts)}")
-    print(f"PSNR:       {aggregate['psnr']:.4f}")
-    print(f"SSIM:       {aggregate['ssim']:.4f}")
-    print(f"LPIPS:      {aggregate['lpips']:.4f}")
+    print(f"PSNR full:  {aggregate['psnr_full']:.4f}")
+    print(f"SSIM full:  {aggregate['ssim_full']:.4f}")
+    print(f"LPIPS full: {aggregate['lpips_full']:.4f}")
+    print(f"PSNR hole:  {aggregate['psnr_hole']:.4f}")
+    print(f"SSIM hole:  {aggregate['ssim_hole']:.4f}")
+    print(f"LPIPS hole: {aggregate['lpips_hole']:.4f}")
+    print(f"SNE:   {aggregate['sne']:.6f}")
     print(f"Saved to:   {results_root}")
 
 

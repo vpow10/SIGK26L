@@ -84,7 +84,9 @@ def validate_one_epoch(
         if max_metric_samples is None or idx < max_metric_samples:
             batch_size = reconstructed.shape[0]
             for b in range(batch_size):
-                metrics = compute_all_metrics(reconstructed[b].cpu(), gt[b].cpu())
+                metrics = compute_all_metrics(
+                    reconstructed[b].cpu(), gt[b].cpu(), mask[b].cpu()
+                )
                 metric_dicts.append(metrics)
 
     val_psnr = float(np.mean([m["psnr"] for m in metric_dicts]))
